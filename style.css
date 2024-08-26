@@ -16,11 +16,9 @@ img {
 
 /* Header */
 .header {
-  background: linear-gradient(
-    to bottom,
-    rgba(51, 51, 51, 0.9),
-    rgba(0, 0, 0, 0.8)
-  );
+  background-image: url("./assets/images/worldCuisine.webp");
+  background-size: cover;
+  background-position: center;
   color: #fff;
   padding: 10px 20px;
   display: flex;
@@ -44,6 +42,7 @@ img {
 
 .header__title {
   font-size: 1.5em;
+  text-shadow: 3px -1px black;
 }
 
 /* Sidebar (Menu déroulant) */
@@ -116,12 +115,18 @@ img {
 /* Favorites section */
 .favorites {
   padding: 20px;
+  margin-top: 50px;
   background-color: #fff;
+  box-shadow: 0px 1px 15px 2px #0000007d;
 }
 
 .favorites__title {
   font-size: 1.5em;
   margin-bottom: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  text-align: center;
+  box-shadow: 1px 0px 5px 1px #0000007d;
 }
 
 .favorites__carousel {
@@ -156,6 +161,10 @@ img {
 .categories__title {
   font-size: 1.5em;
   margin-bottom: 15px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  text-align: center;
+  box-shadow: 1px 0px 5px 1px #0000007d;
 }
 
 .categories__grid {
@@ -170,6 +179,7 @@ img {
   padding: 10px;
   text-align: center;
   border-radius: 8px;
+  box-shadow: 4px 6px 7px 0px #0000007d;
 }
 
 .categories__image {
@@ -184,6 +194,7 @@ img {
 .about {
   padding: 20px;
   background-color: #fff;
+  box-shadow: 1px 0px 5px 1px #0000007d;
 }
 
 .about__content {
@@ -218,6 +229,7 @@ img {
   padding: 20px;
   background-color: #333;
   color: #fff;
+  box-shadow: 0px -2px 3px 2px #0000007d;
 }
 
 .footer__title {
@@ -232,6 +244,7 @@ img {
 
 .footer__form-group {
   margin-bottom: 15px;
+  margin-right: 5%;
 }
 
 .footer__label {
@@ -252,14 +265,17 @@ img {
 }
 
 .footer__submit {
-  background-color: #ff5722;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
   color: #fff;
+  text-shadow: 1px 1px 2px black;
   border: none;
   padding: 10px 20px;
+  margin: 0 auto;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
   transition: background-color 0.3s;
+  box-shadow: 0px 0px 5px 3px #ffffff5e;
 }
 
 .footer__submit:hover {
