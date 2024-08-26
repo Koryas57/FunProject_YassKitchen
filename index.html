@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon album photo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header avec menu hamburger -->
+    <header class="header">
+        <div class="header__menu-icon">
+            <!-- Trois petits traits pour le menu -->
+            <div class="header__menu-icon-bar"></div>
+            <div class="header__menu-icon-bar"></div>
+            <div class="header__menu-icon-bar"></div>
+        </div>
+        <h1 class="header__title">La cuisine de Yass</h1>
+    </header>
+
+    <!-- Section des plats favoris avec carrousel -->
+    <section class="favorites">
+        <h2 class="favorites__title">Plats favoris</h2>
+        <div class="favorites__carousel">
+            <!-- Chaque item du carrousel -->
+            <div class="favorites__item">
+                <img src="" alt="Image du plat favori 1" class="favorites__image">
+                <p class="favorites__name">Nom du plat 1</p>
+            </div>
+            <div class="favorites__item">
+                <img src="" alt="Image du plat favori 2" class="favorites__image">
+                <p class="favorites__name">Nom du plat 2</p>
+            </div>
+            <!-- Ajoutez d'autres items ici -->
+        </div>
+    </section>
+
+    <!-- Section des catégories par continent -->
+    <section class="categories">
+        <h2 class="categories__title">Catégories par continent</h2>
+        <div class="categories__grid">
+            <div class="categories__card">
+                <img src="./assets/images/cuisineAfricaine.webp" alt="Carte de l'Afrique" class="categories__image">
+            </div>
+            <div class="categories__card">
+                <img src="./assets/images/cuisineAmericaine.webp" alt="Carte de l'Amérique" class="categories__image">
+            </div>
+            <div class="categories__card">
+                <img src="./assets/images/cuisineAsiatique.webp" alt="Carte de l'Asie" class="categories__image">
+            </div>
+            <div class="categories__card">
+                <img src="./assets/images/cuisineEuropeenne.webp" alt="Carte de l'Europe" class="categories__image">
+            </div>
+            <div class="categories__card">
+                <img src="./assets/images/cuisineOceanienne.webp" alt="Carte de l'Océanie" class="categories__image">
+            </div>
+            <!-- Ajoutez d'autres cartes ici -->
+        </div>
+    </section>
+
+    <!-- Section de présentation -->
+    <section class="about">
+        <div class="about__content">
+            <img src="./assets/images/YassShanghai.jpg" alt="Photo de l'éditeur sur le Bund à Shanghaï"
+                class="about__image">
+            <div class="about__text">
+                <h2 class="about__title">À propos de moi</h2>
+                <p class="about__description">
+                    Imprégné dès l'enfance par l'art culinaire, j'ai parcouru les cinq continents, me plongeant dans les
+                    cuisines locales, là où les familles préservent jalousement leurs recettes authentiques et leurs
+                    traditions. Maîtrisant la cuisine française après plusieurs années en tant que cuisinier, j'ai
+                    également exploré et intégré les saveurs et techniques des cuisines du monde entier. Aujourd'hui, je
+                    marie ces influences pour créer des recettes qui rendent hommage aux traditions culinaires, tout en
+                    célébrant la diversité et la richesse des patrimoines gastronomiques de chaque coin du globe.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer avec formulaire de contact -->
+    <footer class="footer">
+        <h2 class="footer__title">Contactez-moi</h2>
+        <form action="mailto:ynezreg@gmail.com" method="POST" class="footer__form">
+            <div class="footer__form-group">
+                <label for="name" class="footer__label">Nom:</label>
+                <input type="text" id="name" name="name" class="footer__input" required>
+            </div>
+            <div class="footer__form-group">
+                <label for="subject" class="footer__label">Objet:</label>
+                <input type="text" id="subject" name="subject" class="footer__input" required>
+            </div>
+            <div class="footer__form-group">
+                <label for="message" class="footer__label">Message:</label>
+                <textarea id="message" name="message" class="footer__textarea" required></textarea>
+            </div>
+            <button type="submit" class="footer__submit">Envoyer</button>
+        </form>
+    </footer>
+
+    <script src="carousel.js"></script>
+</body>
+
+</html>
