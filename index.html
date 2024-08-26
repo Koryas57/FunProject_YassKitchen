@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon album photo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <script defer src="carousel.js"></script>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -20,6 +26,35 @@
         <h1 class="header__title">La cuisine de Yass</h1>
     </header>
 
+    <!-- Menu déroulant -->
+    <nav class="sidebar" id="sidebar">
+        <!-- Contenu du menu déroulant comme montré précédemment -->
+        <ul class="sidebar__menu">
+            <li class="sidebar__item"><a href="#contact" class="sidebar__link">Contact</a></li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link">Recettes Africaines</a>
+                <ul class="sidebar__submenu">
+                    <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Maroc</a></li>
+                    <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Sénégal</a></li>
+                    <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Égypte</a></li>
+                    <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Afrique du Sud</a></li>
+                    <!-- Ajoutez d'autres pays africains ici -->
+                </ul>
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link">Recettes Européennes</a>
+                <ul class="sidebar__submenu">
+                    <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">France</a></li>
+                    <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Italie</a></li>
+                    <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Espagne</a></li>
+                    <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Allemagne</a></li>
+                    <!-- Ajoutez d'autres pays européens ici -->
+                </ul>
+            </li>
+            <!-- Ajoutez les autres continents ici -->
+        </ul>
+    </nav>
+
     <!-- Section des plats favoris avec carrousel -->
     <section class="favorites">
         <h2 class="favorites__title">Plats favoris</h2>
@@ -32,6 +67,22 @@
             <div class="favorites__item">
                 <img src="" alt="Image du plat favori 2" class="favorites__image">
                 <p class="favorites__name">Nom du plat 2</p>
+            </div>
+            <div class="favorites__item">
+                <img src="" alt="Image du plat favori 3" class="favorites__image">
+                <p class="favorites__name">Nom du plat 3</p>
+            </div>
+            <div class="favorites__item">
+                <img src="" alt="Image du plat favori 4" class="favorites__image">
+                <p class="favorites__name">Nom du plat 4</p>
+            </div>
+            <div class="favorites__item">
+                <img src="" alt="Image du plat favori 5" class="favorites__image">
+                <p class="favorites__name">Nom du plat 5</p>
+            </div>
+            <div class="favorites__item">
+                <img src="" alt="Image du plat favori 6" class="favorites__image">
+                <p class="favorites__name">Nom du plat 6</p>
             </div>
             <!-- Ajoutez d'autres items ici -->
         </div>
@@ -81,7 +132,7 @@
 
     <!-- Footer avec formulaire de contact -->
     <footer class="footer">
-        <h2 class="footer__title">Contactez-moi</h2>
+        <h2 class="footer__title" id="contact">Contactez-moi</h2>
         <form action="mailto:ynezreg@gmail.com" method="POST" class="footer__form">
             <div class="footer__form-group">
                 <label for="name" class="footer__label">Nom:</label>
@@ -99,7 +150,6 @@
         </form>
     </footer>
 
-    <script src="carousel.js"></script>
 </body>
 
 </html>

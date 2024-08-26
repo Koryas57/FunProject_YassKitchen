@@ -1,6 +1,7 @@
 /* Global styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,7 +16,11 @@ img {
 
 /* Header */
 .header {
-  background-color: #333;
+  background: linear-gradient(
+    to bottom,
+    rgba(51, 51, 51, 0.9),
+    rgba(0, 0, 0, 0.8)
+  );
   color: #fff;
   padding: 10px 20px;
   display: flex;
@@ -39,6 +44,73 @@ img {
 
 .header__title {
   font-size: 1.5em;
+}
+
+/* Sidebar (Menu déroulant) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Commence hors écran à gauche */
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(51, 51, 51, 0.9),
+    rgba(0, 0, 0, 0.8)
+  ); /* Dégradé linéaire avec transparence */
+  transition: left 0.3s ease; /* Animation pour glisser de gauche à droite */
+  z-index: 1000;
+  padding-top: 60px; /* Pour laisser de l'espace pour le header */
+}
+
+.sidebar__menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar__item {
+  margin: 0;
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Bordure légère avec transparence */
+}
+
+.sidebar__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: block;
+}
+
+.sidebar__submenu {
+  list-style: none;
+  padding: 10px 20px;
+  display: none; /* Le sous-menu est caché par défaut */
+  background-color: rgba(
+    68,
+    68,
+    68,
+    0.8
+  ); /* Fond du sous-menu avec transparence */
+}
+
+.sidebar__submenu-item {
+  padding: 10px 0;
+}
+
+.sidebar__submenu-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+}
+
+.sidebar__item:hover .sidebar__submenu {
+  display: block; /* Afficher le sous-menu lors du survol */
+}
+
+/* Active state pour afficher le menu */
+.sidebar--active {
+  left: 0; /* Le menu est affiché lorsqu'il est activé */
 }
 
 /* Favorites section */
