@@ -1,8 +1,9 @@
 /* Global styles */
 body {
+  max-width: 768px;
   font-family: "Playfair Display", serif;
   font-weight: 500;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
@@ -14,9 +15,16 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
 /* Header */
 .header {
-  background-image: url("./assets/images/worldCuisine.webp");
+  background-image: url("../assets/images/worldCuisine.webp");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -112,21 +120,69 @@ img {
   left: 0; /* Le menu est affiché lorsqu'il est activé */
 }
 
+/* Search bar section */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 400px; /* Ajustez la largeur max selon vos besoins */
+  margin: 10% auto;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.search-bar__input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 25px 0 0 25px;
+}
+
+.search-bar__button {
+  background-color: #e41c09;
+  border: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0 12px 12px 0;
+}
+
+.search-bar__button:hover {
+  background-color: #e7654e;
+}
+
+.search-bar__icon {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+}
+
 /* Favorites section */
 .favorites {
   padding: 20px;
-  margin-top: 50px;
+  margin: 10% 5% 0;
   background-color: #fff;
   box-shadow: 0px 1px 15px 2px #0000007d;
+  border-radius: 30px 30px 30px 30px;
 }
 
 .favorites__title {
   font-size: 1.5em;
-  margin-bottom: 10px;
+  margin-bottom: 10%;
   border-radius: 8px;
   background: linear-gradient(to right, #ff7e5f, #feb47b);
   text-align: center;
+  color: snow;
   box-shadow: 1px 0px 5px 1px #0000007d;
+  text-shadow: 2px 0px 5px black;
 }
 
 .favorites__carousel {
@@ -134,6 +190,12 @@ img {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Internet Explorer 10+ : cache la barre de défilement */
+  gap: 10px;
+}
+
+.favorites__carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari et Opera : cache la barre de défilement */
 }
 
 .favorites__item {
@@ -143,14 +205,27 @@ img {
 }
 
 .favorites__image {
-  height: 120px;
+  height: 95%;
+  width: 100%;
   object-fit: cover;
   border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 4px 6px 7px 0px #0000007d;
 }
 
 .favorites__name {
+  background-color: #ff8c0075;
   text-align: center;
-  margin-top: 5px;
+  width: 99%;
+  margin-top: -2px;
+  border: 2px solid #00000000;
+  color: snow;
+  box-shadow: 1px 0px 3px 1px #0000007d;
+  text-shadow: 2px 0px 3px black;
+  position: relative;
+  z-index: 20;
+  top: -70px;
+  font-weight: 600;
 }
 
 /* Categories section */
@@ -160,11 +235,13 @@ img {
 
 .categories__title {
   font-size: 1.5em;
-  margin-bottom: 15px;
+  margin: 10% 0;
   border-radius: 8px;
   background: linear-gradient(to right, #ff7e5f, #feb47b);
   text-align: center;
+  color: snow;
   box-shadow: 1px 0px 5px 1px #0000007d;
+  text-shadow: 2px 0px 5px black;
 }
 
 .categories__grid {
@@ -195,6 +272,7 @@ img {
   padding: 20px;
   background-color: #fff;
   box-shadow: 1px 0px 5px 1px #0000007d;
+  margin: 10%;
 }
 
 .about__content {
@@ -218,6 +296,7 @@ img {
 .about__title {
   font-size: 1.5em;
   margin-bottom: 10px;
+  text-shadow: 0px 0px 0px black;
 }
 
 .about__description {
@@ -266,16 +345,16 @@ img {
 
 .footer__submit {
   background: linear-gradient(to right, #ff7e5f, #feb47b);
-  color: #fff;
-  text-shadow: 1px 1px 2px black;
+  color: snow;
   border: none;
   padding: 10px 20px;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1em;
   transition: background-color 0.3s;
-  box-shadow: 0px 0px 5px 3px #ffffff5e;
+  box-shadow: 1px 0px 5px 1px #0000007d;
+  text-shadow: 2px 0px 5px black;
 }
 
 .footer__submit:hover {
