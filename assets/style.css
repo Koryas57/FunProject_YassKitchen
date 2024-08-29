@@ -446,3 +446,78 @@ a:visited {
 .footer__submit:hover {
   background-color: #e64a19;
 }
+
+/* ////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+/////////                                     /////////
+/////////          PAGE ALPHABET              /////////
+/////////                                     /////////
+///////////////////////////////////////////////////////
+/////////////////////////////////////////////////////// */
+
+.alphabet-search {
+  padding: 20px;
+}
+
+.alphabet-search__letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.alphabet-search__letter {
+  background-color: #ff98006b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  flex: 1 0 21%; /* Pour 5 lettres par ligne en mobile */
+  max-width: 60px; /* Pour limiter la largeur des boutons */
+}
+
+.alphabet-search__letter:hover {
+  background-color: #e41c09;
+}
+
+.alphabet-search__results {
+  margin-top: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Initialement caché */
+}
+
+.alphabet-search__result-link {
+  font-family: "Cookie", cursive;
+  font-size: 2rem;
+  display: block;
+  box-shadow: 0 0 3px 1px black;
+  padding: 10px;
+  margin-bottom: 25px;
+  color: #ff7e5f;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.alphabet-search__result-link:hover {
+  background-color: #ffe5e0;
+}
+
+/* Media Query pour tablettes et plus grands écrans */
+@media (min-width: 768px) {
+  .alphabet-search__letter {
+    flex: 1 0 10%; /* Pour 10 lettres par ligne en tablettes */
+  }
+}
+
+@media (min-width: 1024px) {
+  .alphabet-search__letter {
+    flex: 1 0 7%; /* Pour 14 lettres par ligne en grands écrans */
+  }
+}

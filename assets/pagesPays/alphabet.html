@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> &#x1F4D6;
-        La cuisine de Yass &nbsp;&#x1F30F;
+        Recettes par ordre alphabétique &nbsp;&#x1F30F;
     </title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,8 +15,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
-    <script defer src="./assets/scripts/carousel.js"></script>
-    <script defer src="./assets/scripts/script.js"></script>
+    <script defer src="../scripts/script.js"></script>
 </head>
 
 <body>
@@ -36,7 +35,7 @@
     <!-- Menu déroulant -->
     <nav class="sidebar" id="sidebar">
         <ul class="sidebar__menu">
-            <li class="sidebar__item"><a href="./index.html" class="sidebar__link">Accueil</a></li>
+            <li class="sidebar__item"><a href="/index.html" class="sidebar__link">Accueil</a></li>
             <li class="sidebar__item"><a href="#" class="sidebar__link">Recettes Africaines</a>
                 <ul class="sidebar__submenu">
                     <li class="sidebar__submenu-item"><a href="./assets/pagesPays/algerie.html"
@@ -116,67 +115,48 @@
         </button>
     </div>
 
-    <!-- Section des plats favoris avec carrousel -->
-    <section class="favorites">
-        <h2 class="favorites__title">Vos Plats favoris</h2>
-        <div class="favorites__carousel">
-            <!-- Chaque item du carrousel -->
-            <div class="favorites__item">
-                <img src="./assets/images/plat2.webp" alt="Soupe Wonton" class="favorites__image">
-                <p class="favorites__name">Soupe Wonton</p>
-            </div>
-            <div class="favorites__item">
-                <img src="./assets/images/plat3.webp" alt="Poulet frit coréen" class="favorites__image">
-                <p class="favorites__name">Poulet frit coréen</p>
-            </div>
-            <div class="favorites__item">
-                <img src="./assets/images/plat1.webp" alt="Boeuf Rendang" class="favorites__image">
-                <p class="favorites__name">Boeuf Rendang</p>
-            </div>
-            <div class="favorites__item">
-                <img src="" alt="Image du plat favori 4" class="favorites__image">
-                <p class="favorites__name">Nom du plat 4</p>
-            </div>
-            <div class="favorites__item">
-                <img src="" alt="Image du plat favori 5" class="favorites__image">
-                <p class="favorites__name">Nom du plat 5</p>
-            </div>
-            <div class="favorites__item">
-                <img src="" alt="Image du plat favori 6" class="favorites__image">
-                <p class="favorites__name">Nom du plat 6</p>
-            </div>
-            <!-- Ajoutez d'autres items ici -->
+    <!-- Recherche par ordre alphabétique -->
+
+    <section class="alphabet-search">
+        <div class="alphabet-search__letters">
+            <button class="alphabet-search__letter" data-letter="A">A</button>
+            <button class="alphabet-search__letter" data-letter="B">B</button>
+            <button class="alphabet-search__letter" data-letter="C">C</button>
+            <button class="alphabet-search__letter" data-letter="D">D</button>
+            <button class="alphabet-search__letter" data-letter="E">E</button>
+            <button class="alphabet-search__letter" data-letter="F">F</button>
+            <button class="alphabet-search__letter" data-letter="G">G</button>
+            <button class="alphabet-search__letter" data-letter="H">H</button>
+            <button class="alphabet-search__letter" data-letter="I">I</button>
+            <button class="alphabet-search__letter" data-letter="J">J</button>
+            <button class="alphabet-search__letter" data-letter="K">K</button>
+            <button class="alphabet-search__letter" data-letter="L">L</button>
+            <button class="alphabet-search__letter" data-letter="M">M</button>
+            <button class="alphabet-search__letter" data-letter="N">N</button>
+            <button class="alphabet-search__letter" data-letter="O">O</button>
+            <button class="alphabet-search__letter" data-letter="P">P</button>
+            <button class="alphabet-search__letter" data-letter="Q">Q</button>
+            <button class="alphabet-search__letter" data-letter="R">R</button>
+            <button class="alphabet-search__letter" data-letter="S">S</button>
+            <button class="alphabet-search__letter" data-letter="T">T</button>
+            <button class="alphabet-search__letter" data-letter="U">U</button>
+            <button class="alphabet-search__letter" data-letter="V">V</button>
+            <button class="alphabet-search__letter" data-letter="W">W</button>
+            <button class="alphabet-search__letter" data-letter="X">X</button>
+            <button class="alphabet-search__letter" data-letter="Y">Y</button>
+            <button class="alphabet-search__letter" data-letter="Z">Z</button>
+        </div>
+        <div class="alphabet-search__results" id="results">
+            <!-- Les résultats seront générés ici -->
         </div>
     </section>
 
-    <!-- Section des catégories par continent -->
-    <section class="categories">
-        <h2 class="categories__title">Catégories par continent</h2>
-        <div class="categories__grid">
-            <div class="categories__card">
-                <img src="./assets/images/cuisineAfricaine.webp" alt="Carte de l'Afrique" class="categories__image">
-            </div>
-            <div class="categories__card">
-                <img src="./assets/images/cuisineAmericaine.webp" alt="Carte de l'Amérique" class="categories__image">
-            </div>
-            <div class="categories__card">
-                <img src="./assets/images/cuisineAsiatique.webp" alt="Carte de l'Asie" class="categories__image">
-            </div>
-            <div class="categories__card">
-                <img src="./assets/images/cuisineEuropeenne.webp" alt="Carte de l'Europe" class="categories__image">
-            </div>
-            <div class="categories__card">
-                <img src="./assets/images/cuisineOceanienne.webp" alt="Carte de l'Océanie" class="categories__image">
-            </div>
-            <!-- Ajoutez d'autres cartes ici -->
-        </div>
-    </section>
+
 
     <!-- Section de présentation -->
     <section class="about">
         <div class="about__content">
-            <img src="./assets/images/YassShanghai.webp" alt="Photo de l'éditeur sur le Bund à Shanghaï"
-                class="about__image">
+            <img src="../images/YassShanghai.webp" alt="Photo de l'éditeur sur le Bund à Shanghaï" class="about__image">
             <div class="about__text">
                 <h2 class="about__title">À propos de moi</h2>
                 <p class="about__description">
