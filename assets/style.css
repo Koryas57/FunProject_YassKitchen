@@ -46,6 +46,11 @@ a:visited {
   right: 8%;
 }
 
+.header__menu-icon:hover {
+  transform: rotate(-720deg) scale(1.5) rotateY(5turn);
+  transition: transform 0.5s ease;
+}
+
 .header__menu-icon-bar {
   width: 30px;
   height: 3px;
@@ -55,10 +60,10 @@ a:visited {
 
 .header__title {
   text-wrap: nowrap;
-  font-size: 3.5em;
+  font-size: 3.2rem;
   font-family: "Cookie", cursive;
   text-shadow: 2px 2px 0px #000000;
-  margin: 83vh auto 0;
+  margin: 78vh auto 0;
   text-align: center;
   color: #ffa014;
 }
@@ -86,9 +91,9 @@ a:visited {
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);
-  -webkit-animation: fade_move_down 4s ease-in-out infinite;
-  -moz-animation: fade_move_down 4s ease-in-out infinite;
-  animation: fade_move_down 4s ease-in-out infinite;
+  -webkit-animation: fade_move_down 2s ease-in-out infinite;
+  -moz-animation: fade_move_down 2s ease-in-out infinite;
+  animation: fade_move_down 2s ease-in-out infinite;
 }
 
 @-webkit-keyframes fade_move_down {
