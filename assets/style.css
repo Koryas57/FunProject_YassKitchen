@@ -48,7 +48,11 @@ a:visited {
 
 .header__menu-icon:hover {
   transform: rotate(-720deg) scale(1.5) rotateY(5turn);
+  -webkit-transform: rotate(-720deg) scale(1.5) rotateY(5turn);
+  -moz-transform: rotate(-720deg) scale(1.5) rotateY(5turn);
   transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
 }
 
 .header__menu-icon-bar {
@@ -513,6 +517,12 @@ a:visited {
 @media (min-width: 768px) {
   .alphabet-search__letter {
     flex: 1 0 10%; /* Pour 10 lettres par ligne en tablettes */
+  }
+  .scroll-down {
+    left: 48%;
+  }
+  .header__title {
+    margin: 108vh auto 0;
   }
 }
 
