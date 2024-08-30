@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const letters = document.querySelectorAll('.alphabet-search__letter');
     const resultsContainer = document.getElementById('results');
+    const anchor = document.getElementById('results-anchor')
 
     const data = {
         A: ['Adobo', 'Agneau rogan josh', 'Agneau vindaloo'],
@@ -104,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedLetter = letter.getAttribute('data-letter');
             const items = data[selectedLetter] || [];
             displayResults(items);
+            anchor.scrollIntoView({ behavior: 'smooth' });
         });
     });
 
