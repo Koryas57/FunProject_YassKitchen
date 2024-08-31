@@ -140,3 +140,16 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsContainer.style.display = 'block';
     }
 });
+
+// Animations Page Continent
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Ajoute des animations au chargement des éléments
+    const countries = document.querySelectorAll('.continent-country');
+
+    countries.forEach((country, index) => {
+        setTimeout(() => {
+            country.classList.add('continent-country--visible');
+        }, index * 150); // Ajoute un délai pour un effet de cascade
+    });
+});

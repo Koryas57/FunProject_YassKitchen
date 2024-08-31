@@ -23,6 +23,19 @@ a:visited {
   color: #ff7e5f;
 }
 
+/* Fonts and colors for continent pages*/
+
+.nanum-brush-script-regular {
+  font-family: "Nanum Brush Script", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+:root {
+  --primary-color: #ffd37452;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+}
+
 /* Header */
 .header {
   height: 100vh;
@@ -356,24 +369,37 @@ a:visited {
 .categories__grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
+  justify-content: center;
 }
 
-.categories__card {
-  flex: 1 1 calc(50% - 15px);
-  background-color: #fff;
-  padding: 10px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 4px 6px 7px 0px #0000007d;
-}
-
-.categories__image {
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.category {
+  text-decoration: none;
+  color: #333;
   width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+.category:hover {
+  transform: scale(1.05);
+}
+
+.category__image {
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+  width: 100%;
+}
+
+.category__name {
+  display: block;
+  font-size: 2em;
+  font-family: "Cookie", cursive;
+  background-color: var(--primary-color);
 }
 
 /* About section */
@@ -549,6 +575,147 @@ a:visited {
   .alphabet-search__letter {
     flex: 1 0 7%; /* Pour 14 lettres par ligne en grands écrans */
   }
+}
+/* ////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+/////////                                     /////////
+/////////          PAGE CONTINENT             /////////
+/////////                                     /////////
+///////////////////////////////////////////////////////
+/////////////////////////////////////////////////////// */
+
+.continent-page {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header de la page de Continent */
+.continent-header {
+  background-image: url("./images/asiaBackground.webp");
+  position: relative;
+  height: 25vh;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 355px) {
+  .continent-header {
+    background-position: center;
+  }
+}
+
+/* .continent-header__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+    );
+    } */
+
+.continent-header__title {
+  position: relative;
+  font-size: 2.6em;
+  z-index: 1;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0);
+}
+
+/* Contenu principal */
+.continent-content {
+  padding: 20px;
+}
+
+/* Introduction */
+.continent-intro {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.continent-intro__text {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Grille de pays */
+.continent-countries {
+  margin: 20px 0;
+}
+
+.continent-countries__title {
+  text-align: center;
+  font-size: 3.9em;
+  margin: 0 auto;
+}
+
+.continent-countries__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.continent-country {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  overflow: hidden;
+  transition: transform 1.5s ease-in-out;
+}
+
+.continent-country:hover {
+  transform: scale(1.05);
+}
+
+.continent-country__image {
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+}
+
+.continent-country__name {
+  display: block;
+  font-size: 2em;
+  font-style: italic;
+}
+
+/* Footer */
+.continent-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+/* Animation des pays */
+.continent-country {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: opacity 2.5s ease-out, transform 1.5s ease-out;
+}
+
+.continent-country--visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ////////////////////////////////////////////////////
