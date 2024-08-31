@@ -22,6 +22,7 @@ a {
 a:visited {
   color: #ff7e5f;
 }
+
 /* Header */
 .header {
   height: 100vh;
@@ -43,6 +44,16 @@ a:visited {
   height: 24px;
   position: absolute;
   top: 10%;
+  right: 8%;
+}
+.recipe-header__menu-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  position: absolute;
+  top: 3%;
   right: 8%;
 }
 

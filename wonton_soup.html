@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soupe Wonton - La Cuisine de Yass</title>
     <script defer src="./assets/scripts/recipeFonctionnalities.js"></script>
+    <script defer src="./assets/scripts/script.js"></script>
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,19 +24,98 @@
     <meta property="og:title" content="Soupe Wonton - La Cuisine de Yass" />
     <meta property="og:description"
         content="Apprenez à préparer la soupe Wonton, une spécialité chinoise savoureuse. Découvrez les ingrédients nécessaires et les étapes pour réussir ce plat chez vous." />
-    <meta property="og:image" content="https://ibb.co/VqVJG1P" />
+    <meta property="og:image" content="https://i.ibb.co/VqVJG1P/beautiful-Cuisine.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Soupe Wonton - La Cuisine de Yass" />
     <meta name="twitter:description"
         content="Découvrez comment préparer la soupe Wonton avec cette recette authentique. Parfaite pour un dîner réconfortant." />
-    <meta name="twitter:image" content="https://ibb.co/VqVJG1P" />
+    <meta name="twitter:image" content="https://i.ibb.co/VqVJG1P/beautiful-Cuisine.webp" />
 </head>
 
 <body>
     <header class="recipe-header">
+        <div class="recipe-header__menu-icon">
+            <!-- Trois petits traits pour le menu -->
+            <div class="header__menu-icon-bar"></div>
+            <div class="header__menu-icon-bar"></div>
+            <div class="header__menu-icon-bar"></div>
+        </div>
         <h1 class="recipe-title">Soupe Wonton</h1>
     </header>
+
+    <!-- Menu déroulant -->
+    <nav class="sidebar" id="sidebar">
+        <ul class="sidebar__menu">
+            <li class="sidebar__item"><a href="index.html" class="sidebar__link">Accueil</a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Recettes Africaines</a>
+                <ul class="sidebar__submenu">
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/algerie.html"
+                            class="sidebar__submenu-link">Algérie</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/ileDeLaReunion.html"
+                            class="sidebar__submenu-link">Créole réunionnais</a>
+                    </li>
+                    <!-- Ajoutez d'autres pays africains ici -->
+                </ul>
+            </li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Recettes Américaines</a>
+                <ul class="sidebar__submenu">
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/canada.html"
+                            class="sidebar__submenu-link">Canada</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/usa.html
+                            " class="sidebar__submenu-link">USA</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/latin.html"
+                            class="sidebar__submenu-link">Amérique latine</a></li>
+                    <!-- Ajoutez d'autres pays américains ici -->
+                </ul>
+            </li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Recettes Asiatiques</a>
+                <ul class="sidebar__submenu">
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/japon.html"
+                            class="sidebar__submenu-link">Japon</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/coree.html"
+                            class="sidebar__submenu-link">Corée</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/philippines.html"
+                            class="sidebar__submenu-link">Philippines</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/indonesie.html"
+                            class="sidebar__submenu-link">Indonésie</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/cambodge.html"
+                            class="sidebar__submenu-link">Cambodge</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/thailande.html"
+                            class="sidebar__submenu-link">Thaïlande</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/hongkong.html"
+                            class="sidebar__submenu-link">Hong Kong</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/chine.html"
+                            class="sidebar__submenu-link">Chine</a></li>
+                    <!-- Ajoutez d'autres pays asiatiques ici -->
+                </ul>
+            </li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Recettes Européennes</a>
+                <ul class="sidebar__submenu">
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/scandinavie.html"
+                            class="sidebar__submenu-link">Scandinavie</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/france.html"
+                            class="sidebar__submenu-link">France</a></li>
+                    <li class="sidebar__submenu-item"><a href="./assets/pagesPays/italie.html"
+                            class="sidebar__submenu-link">Italie</a></li>
+                    <!-- Ajoutez d'autres pays européens ici -->
+                </ul>
+            </li>
+            <li class="sidebar__item"><a href="./assets/pagesPays/inde.html" class="sidebar__link">Recettes
+                    Indiennes</a>
+                <ul class="sidebar__submenu">
+                    <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Rajasthan</a></li>
+                    <!-- Ajoutez d'autres pays indiens ici -->
+                </ul>
+            <li class="sidebar__item"><a href="./alphabet.html" class="sidebar__link">Par ordre
+                    alphabétique </a></li>
+            <li class="sidebar__item"><a href="#contact" class="sidebar__link">Suggestions de recettes</a>
+            </li>
+        </ul>
+    </nav>
+
 
     <main class="recipe">
         <section class="recipe-intro">

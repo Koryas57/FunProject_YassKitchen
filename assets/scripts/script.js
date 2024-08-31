@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Sélection des éléments avec querySelector
     const menuIcon = document.querySelector('.header__menu-icon');
+    const recipeMenuIcon = document.querySelector('.recipe-header__menu-icon');
     const sidebar = document.querySelector('.sidebar');
 
     // Fonction pour basculer l'affichage du menu
@@ -10,17 +10,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fonction pour fermer le menu si on clique en dehors de celui-ci
     function closeSidebar(event) {
-        if (sidebar.classList.contains('sidebar--active') && !sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+        if (
+            sidebar.classList.contains('sidebar--active') &&
+            !sidebar.contains(event.target) &&
+            (!menuIcon || !menuIcon.contains(event.target)) &&
+            (!recipeMenuIcon || !recipeMenuIcon.contains(event.target))
+        ) {
             sidebar.classList.remove('sidebar--active');
         }
     }
 
     // Ajouter un événement au clic sur l'icône du menu hamburger
-    menuIcon.addEventListener('click', toggleSidebar);
+    if (menuIcon) {
+        menuIcon.addEventListener('click', toggleSidebar);
+    }
+
+    // Ajouter un événement au clic sur l'icône du menu hamburger sur les pages de plats
+    if (recipeMenuIcon) {
+        recipeMenuIcon.addEventListener('click', toggleSidebar);
+    }
 
     // Ajouter un événement pour fermer le menu en cliquant en dehors
     document.addEventListener('click', closeSidebar);
 });
+
 
 
 // Gestion des lettres pour la page de classement alphabétique
