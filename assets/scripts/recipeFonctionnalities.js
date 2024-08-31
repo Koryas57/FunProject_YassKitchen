@@ -23,6 +23,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Logique des boutons + et - pour l'ajout de parts(portions)
+
+document.addEventListener('DOMContentLoaded', () => {
+    const portionInput = document.getElementById('portion-input');
+    const increaseButton = document.getElementById('increase-portion');
+    const decreaseButton = document.getElementById('decrease-portion');
+    const ingredients = document.querySelectorAll('.ingredient');
+
+    function updatePortions() {
+        const portions = parseFloat(portionInput.value) || 1;
+        ingredients.forEach(ingredient => {
+            const baseQuantity = parseFloat(ingredient.dataset.baseQuantity);
+            const originalText = ingredient.dataset.originalText || ingredient.textContent;
+            ingredient.dataset.originalText = originalText; // Stocker le texte original s'il n'est pas déjà stocké
+
+            const quantityMatch = originalText.match(/^\d+([.,]?\d+)?/); // Récupère la quantité numérique initiale
+            if (quantityMatch) {
+                const unitText = originalText.replace(quantityMatch[0], '').trim(); // Récupère le texte après la quantité
+                const newQuantity = (baseQuantity * portions).toFixed(2).replace('.00', ''); // Calcule la nouvelle quantité
+                ingredient.textContent = `${newQuantity} ${unitText}`;
+            } else {
+                ingredient.textContent = originalText; // Si pas de quantité trouvée, ne rien changer
+            }
+        });
+    }
+
+    increaseButton.addEventListener('click', () => {
+        portionInput.value = parseInt(portionInput.value) + 1;
+        updatePortions();
+    });
+
+    decreaseButton.addEventListener('click', () => {
+        if (portionInput.value > 1) {
+            portionInput.value = parseInt(portionInput.value) - 1;
+            updatePortions();
+        }
+    });
+
+    portionInput.addEventListener('input', updatePortions);
+});
+
 
 // Animation des ingredients
 

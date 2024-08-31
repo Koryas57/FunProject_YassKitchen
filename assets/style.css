@@ -20,7 +20,7 @@ a {
 }
 
 a:visited {
-  color: white;
+  color: #ff7e5f;
 }
 /* Header */
 .header {
@@ -178,6 +178,10 @@ a:visited {
   margin: 0 auto;
 }
 
+.sidebar__link:visited {
+  color: snow;
+}
+
 .sidebar__submenu {
   list-style: none;
   padding: 10px 20px;
@@ -199,6 +203,10 @@ a:visited {
   text-decoration: none;
   font-size: 1em;
   display: block;
+}
+
+.sidebar__submenu-link:visited {
+  color: snow;
 }
 
 .sidebar__item:hover .sidebar__submenu {
@@ -608,11 +616,25 @@ a:visited {
 #portion-input {
   width: 30px;
   padding: 5px 0 2px 0;
-  margin-left: 10px;
   text-align: center;
   font-size: 1em;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+.portion-button {
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 2%;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.portion-button:hover {
+  background-color: #e06b4f;
 }
 
 .ingredient-list {
