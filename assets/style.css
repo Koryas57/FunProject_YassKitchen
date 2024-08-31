@@ -1,3 +1,20 @@
+/* Fonts and colors for continent pages*/
+
+.nanum-brush-script-regular {
+  font-family: "Nanum Brush Script", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+:root {
+  --primary-color: radial-gradient(
+    circle,
+    rgba(255, 223, 194, 1) 0%,
+    rgba(255, 211, 116, 0.7959558823529411) 93%
+  );
+  --secondary-color: #ffa114c5;
+  --accent-color: #ffa014;
+}
+
 /* Global styles */
 body {
   max-width: 768px;
@@ -20,20 +37,7 @@ a {
 }
 
 a:visited {
-  color: #ff7e5f;
-}
-
-/* Fonts and colors for continent pages*/
-
-.nanum-brush-script-regular {
-  font-family: "Nanum Brush Script", cursive;
-  font-weight: 600;
-  font-style: normal;
-}
-:root {
-  --primary-color: #ffd37452;
-  --secondary-color: #2ecc71;
-  --accent-color: #e74c3c;
+  color: var(--secondary-color);
 }
 
 /* Header */
@@ -93,7 +97,7 @@ a:visited {
   text-shadow: 2px 2px 0px #000000;
   margin: 78vh auto 0;
   text-align: center;
-  color: #ffa014;
+  color: var(--accent-color);
 }
 
 /* Scroll Down Arrow  */
@@ -110,12 +114,12 @@ a:visited {
   box-shadow: 4px 4px 4px black;
   width: 50px;
   height: 50px;
-  border-bottom: 5px solid #c97e26;
-  border-right: 5px solid #c97e26;
+  border-bottom: 5px solid var(--accent-color);
+  border-right: 5px solid var(--accent-color);
   z-index: 9;
   border-radius: 4px;
   z-index: 9;
-  left: 44%;
+  left: 46%;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);
@@ -300,7 +304,7 @@ a:visited {
   font-size: 1.5em;
   margin-bottom: 10%;
   border-radius: 8px;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: var(--secondary-color);
   text-align: center;
   color: snow;
   box-shadow: 1px 0px 5px 1px #0000007d;
@@ -359,7 +363,7 @@ a:visited {
   font-size: 1.5em;
   margin: 10% 0;
   border-radius: 8px;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: var(--secondary-color);
   text-align: center;
   color: snow;
   box-shadow: 1px 0px 5px 1px #0000007d;
@@ -399,7 +403,7 @@ a:visited {
   display: block;
   font-size: 2em;
   font-family: "Cookie", cursive;
-  background-color: var(--primary-color);
+  background: var(--primary-color);
 }
 
 /* About section */
@@ -479,7 +483,7 @@ a:visited {
 }
 
 .footer__submit {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: var(--secondary-color);
   color: snow;
   border: none;
   padding: 10px 20px;
@@ -642,7 +646,7 @@ a:visited {
 .continent-intro {
   padding: 20px;
   text-align: center;
-  background-color: #fff;
+  background: var(--primary-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   border-radius: 10px;
@@ -891,5 +895,17 @@ a:visited {
   .recipe-container ol li {
     padding: 8px;
     font-size: 0.9em;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__menu-icon {
+    right: 15%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__menu-icon {
+    right: 20%;
   }
 }
